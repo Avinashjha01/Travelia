@@ -1,12 +1,13 @@
 require("dotenv").config();
 const express= require('express');
 const jwt = require("jsonwebtoken");
+
 const path = require('path');
 require("./config/conn");
 const app = express();
 const routes = require("./routes");
 
-const port = 8000;
+const port = process.env.PORT;
 
  
 app.use(express.json());
